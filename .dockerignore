@@ -1,0 +1,6 @@
+.git
+.gitignore
+runtime/
+runtime2/
+*.md
+!hakoniwa_ra_runtime_v1_3.zip
