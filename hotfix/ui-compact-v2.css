@@ -2,7 +2,7 @@
 @media(max-width:520px){
   /* Home: remove migration/source prose and keep only actions + game rankings. */
   #home .hero{
-    padding:9px 10px 10px;
+    padding:6px 9px 7px;
     border-radius:14px;
   }
   #home .hero>h1,
@@ -11,16 +11,18 @@
     display:none!important;
   }
   #home .hero-actions{
-    margin:0 0 7px;
+    margin:0 0 3px;
+    gap:5px;
   }
-  #home .hero-actions .primary{
-    min-height:42px;
-    padding:8px 13px;
-    font-size:14px;
+  #home .hero-actions .primary,
+  #home .hero-actions .guide-button{
+    min-height:32px;
+    padding:4px 9px;
+    font-size:11px;
   }
   #home .hero-leaders-wrap{
     margin-top:0;
-    padding-top:7px;
+    padding-top:4px;
   }
   #home .hero-leaders-head{
     margin:0 0 5px;
