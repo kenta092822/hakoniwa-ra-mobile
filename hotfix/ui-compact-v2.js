@@ -48,7 +48,7 @@ renderStats=(i)=>{
   if(sats.length)items.push(`🛰️ ${sats.length}基`);
   if(i.biology)items.push(compactBio(i.biology));
   if(hc)items.push(`⚽ ${formatInt(hc.points)}pt ${cupStageText(hc.stage)}`);
-  $('#stats').innerHTML=items.map(v=>`<span class="stat">${v}</span>`).join('');
+  $('#stats').innerHTML=`<span class="stat-flow">${items.map(v=>`<span class="stat">${v}</span>`).join('')}</span>`;
 };
 
 /* Re-render the home summary once after the original bootstrap. */
