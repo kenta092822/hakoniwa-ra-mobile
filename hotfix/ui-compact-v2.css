@@ -1,0 +1,144 @@
+/* Hotfix v2: compact game-first home and island summary on phones */
+@media(max-width:520px){
+  /* Home: remove migration/source prose and keep only actions + game rankings. */
+  #home .hero{
+    padding:9px 10px 10px;
+    border-radius:14px;
+  }
+  #home .hero>h1,
+  #home .hero>.hero-sub,
+  #home .hero>.source-row{
+    display:none!important;
+  }
+  #home .hero-actions{
+    margin:0 0 7px;
+  }
+  #home .hero-actions .primary{
+    min-height:42px;
+    padding:8px 13px;
+    font-size:14px;
+  }
+  #home .hero-leaders-wrap{
+    margin-top:0;
+    padding-top:7px;
+  }
+  #home .hero-leaders-head{
+    margin:0 0 5px;
+    font-size:10px;
+  }
+  #home .hero-leaders{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:4px;
+  }
+  #home .hero-leader{
+    display:grid;
+    grid-template-columns:minmax(0,1fr) auto;
+    grid-template-areas:
+      "label value"
+      "name name";
+    gap:0 4px;
+    min-width:0;
+    min-height:34px;
+    padding:4px 6px;
+    border-radius:9px;
+  }
+  #home .hero-leader-label{
+    grid-area:label;
+    margin:0;
+    min-width:0;
+    overflow:hidden;
+    white-space:nowrap;
+    font-size:8.5px;
+    line-height:1.2;
+  }
+  #home .hero-leader-value{
+    grid-area:value;
+    margin:0;
+    white-space:nowrap;
+    font-size:8.5px;
+    line-height:1.2;
+  }
+  #home .hero-leader-name{
+    grid-area:name;
+    margin-top:1px;
+    font-size:10.5px;
+    line-height:1.2;
+  }
+
+  /* Island header: back/name/avatar on one row, summary below in a dense 3-column grid. */
+  .island-head{
+    display:grid;
+    grid-template-columns:52px minmax(0,1fr) 44px;
+    grid-template-areas:"back main avatar";
+    column-gap:6px;
+    row-gap:0;
+    align-items:start;
+    padding:7px;
+  }
+  .island-head .back{
+    grid-area:back;
+    width:52px;
+    min-height:32px;
+    padding:4px 2px;
+    font-size:11px;
+  }
+  .island-head-main{
+    grid-area:main;
+    min-width:0;
+  }
+  .island-head h2{
+    margin:0 0 4px;
+    font-size:17px;
+    line-height:1.2;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+  }
+  .avatar-settings{
+    grid-area:avatar;
+    justify-self:end;
+    width:44px;
+    min-height:44px;
+    padding:2px;
+    border-radius:9px;
+  }
+  .avatar-settings img{width:28px;height:28px}
+  .avatar-settings span{font-size:7px}
+  .stats{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:3px;
+    width:100%;
+  }
+  .stat,
+  .stat:nth-child(n+4){
+    grid-column:auto;
+    min-width:0;
+    padding:2px 3px;
+    border-radius:7px;
+    font-size:8.7px;
+    line-height:1.25;
+    text-align:center;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:clip;
+  }
+  .prizes{
+    gap:3px;
+    margin-top:3px;
+    max-height:20px;
+    overflow-x:auto;
+    overflow-y:hidden;
+    flex-wrap:nowrap;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+  }
+  .prizes:empty{display:none}
+  .prizes::-webkit-scrollbar{display:none}
+  .prize-badge{
+    flex:0 0 auto;
+    padding:1px 4px;
+    font-size:8px;
+  }
+  .prize-badge img{width:12px;height:12px}
+}
