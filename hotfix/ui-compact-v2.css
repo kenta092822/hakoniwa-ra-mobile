@@ -28,7 +28,7 @@
   }
   #home .hero-leaders{
     grid-template-columns:repeat(2,minmax(0,1fr));
-    gap:4px;
+    gap:2px 3px;
   }
   #home .hero-leader{
     display:grid;
@@ -38,9 +38,9 @@
       "name name";
     gap:0 4px;
     min-width:0;
-    min-height:34px;
-    padding:4px 6px;
-    border-radius:9px;
+    min-height:30px;
+    padding:3px 5px;
+    border-radius:8px;
   }
   #home .hero-leader-label{
     grid-area:label;

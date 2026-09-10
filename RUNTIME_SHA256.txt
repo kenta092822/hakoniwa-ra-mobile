@@ -1,1 +1,1 @@
-ce4d11e6bf7afd288c63a2f6f768fa9c819ee0c051f903357ccaa0e5c9e5eab1  hakoniwa_ra_runtime_v1_3.zip
+16ae75dbe8906c59e2ca3a810a75f91b6e58275be1e7407c6de9292309a3df05  hakoniwa_ra_runtime_v1_3.zip
