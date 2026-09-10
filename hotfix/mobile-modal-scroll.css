@@ -1,0 +1,20 @@
+/* Hakoniwa R.A. Mobile v1.3 hotfix 1
+   Make tall dialogs fully reachable on iPhone/Safari and other short viewports. */
+.modal{
+  overflow-y:auto;
+  -webkit-overflow-scrolling:touch;
+  overscroll-behavior:contain;
+  box-sizing:border-box;
+}
+.modal-card{
+  box-sizing:border-box;
+  max-height:calc(100dvh - 36px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+  overflow-y:auto;
+  -webkit-overflow-scrolling:touch;
+  overscroll-behavior:contain;
+}
+@supports not (height:100dvh){
+  .modal-card{
+    max-height:calc(100vh - 36px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+  }
+}
