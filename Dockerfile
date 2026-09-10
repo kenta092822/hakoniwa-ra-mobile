@@ -7,8 +7,10 @@ RUN apt-get update \
 WORKDIR /app
 
 COPY hakoniwa_ra_runtime_v1_3.zip /tmp/hakoniwa_ra_runtime_v1_3.zip
+COPY hotfix/mobile-modal-scroll.css /tmp/mobile-modal-scroll.css
 RUN unzip /tmp/hakoniwa_ra_runtime_v1_3.zip -d /app \
-    && rm /tmp/hakoniwa_ra_runtime_v1_3.zip \
+    && cat /tmp/mobile-modal-scroll.css >> /app/public/style.css \
+    && rm /tmp/hakoniwa_ra_runtime_v1_3.zip /tmp/mobile-modal-scroll.css \
     && mkdir -p /data
 
 ENV NODE_ENV=production
