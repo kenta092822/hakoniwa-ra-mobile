@@ -13,13 +13,20 @@
   #home .hero-actions{
     margin:0 0 3px;
     gap:5px;
+    flex-wrap:nowrap;
   }
   #home .hero-actions .primary,
-  #home .hero-actions .guide-button{
+  #home .hero-actions .guide-button,
+  #home .hero-actions .invite-button{
     min-height:32px;
-    padding:4px 9px;
-    font-size:11px;
+    min-width:0;
+    padding:4px 7px;
+    font-size:10px;
+    white-space:nowrap;
   }
+  #home .hero-actions .primary{flex:1.05}
+  #home .hero-actions .guide-button{flex:1.35}
+  #home .hero-actions .invite-button{flex:.8}
   #home .hero-leaders-wrap{
     margin-top:0;
     padding-top:4px;
