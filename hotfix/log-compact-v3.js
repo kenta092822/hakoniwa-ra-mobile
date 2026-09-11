@@ -1,5 +1,5 @@
 /* Hotfix v3: flatten grouped turn logs into dense one-line records. */
-function renderLogs(i){
+renderLogs=(i)=>{
   const source=i.logs||[];
   const q=logQuery.trim().toLowerCase();
   const filtered=source.filter(l=>{
@@ -15,4 +15,4 @@ function renderLogs(i){
     const category=logCategory(l.text),m=logCategoryMeta(category);
     return `<article class="log-line log-${category}"><span class="log-line-turn">T${l.turn}</span><span class="log-line-type">${m.label}</span>${l.secret?'<span class="log-line-secret">🔒</span>':''}<p>${escapeHtml(l.text)}</p></article>`;
   }).join('');
-}
+};
